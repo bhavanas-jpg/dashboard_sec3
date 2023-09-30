@@ -18,12 +18,18 @@ const CustomerTable = () => {
   };
 
   return (
-    <div style={{ marginTop: "5rem" }}>
-      <h3>Active Members</h3>
+    <div className="tabel__container">
+      <div className="table__heading--sec">
+      <h3 className="heading__text">Active Members</h3>
+      <input type="search"
+      className="search__input"
+      onChange={handleChange} placeholder="Search" />
+      </div>
+     
 
-      <input type="search" onChange={handleChange} />
-
-      <Table dataSource={customerData} pagination={{ defaultPageSize: 6 }}>
+      <Table dataSource={customerData} 
+      key="name"
+      pagination={{ defaultPageSize: 6 }}>
         <Column title="Customer Name" dataIndex="name" key="name" />
         <Column title="Company" dataIndex="company" key="company" />
         <Column
@@ -33,7 +39,9 @@ const CustomerTable = () => {
         />
         <Column title="Email" dataIndex="email" key="email" />
         <Column title="Country" dataIndex="country" key="country" />
-        <Column title="Status" dataIndex="status" key="status" />
+        <Column 
+        className="active__status"
+        title="Status" dataIndex="status" key="status" />
       </Table>
     </div>
   );

@@ -4,9 +4,9 @@ import ProgressBarChart from './ProgressBarChart'
 const StatsOverview = () => {
   return (
     <div
-    style={{border: "1px solid #000"}}
+    className="stats__overview"
     >
-        <h3>Stats Overview</h3>
+        <h3 className="customer__heading">Stats Overview</h3>
         <ProgressBarChart />
     </div>
   )

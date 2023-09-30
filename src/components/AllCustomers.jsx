@@ -3,8 +3,8 @@ import CircularBarChart from './CircularBarChart'
 
 const AllCustomers = () => {
   return (
-    <div>
-        <h3>AllCustomers</h3>
+    <div className="customer__content">
+        <h3 className="customer__heading">All Customers</h3>
         <CircularBarChart />
     </div>
   )
